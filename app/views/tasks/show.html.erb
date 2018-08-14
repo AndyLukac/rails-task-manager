@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @task.title %></h5>
+    <p class="card-text"><%= @task.details %></p>
+    <input type ="checkbox" id="box" disabled <%= @task.completed ? "checked" : "" %> />
+    <label for ="box">
+    <% if @task.completed %>
+      This task is completed
+      <% else %>
+      This task is not completed
+    <% end %>
+    </label>
+  </div>
+  <%= link_to "Go back", index_path %>
+</div>
